@@ -1,0 +1,82 @@
+/* Surf IPTV – strona produktu. Kolory i czcionki jak w aplikacji; czcionki lokalnie (OFL), bez zewnętrznych zapytań. */
+@font-face{font-family:'Big Shoulders Display';font-weight:800;font-display:swap;src:url(fonts/big-shoulders-display-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:'Big Shoulders Display';font-weight:800;font-display:swap;src:url(fonts/big-shoulders-display-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+A720-A7FF}
+@font-face{font-family:'Instrument Sans';font-weight:400;font-display:swap;src:url(fonts/instrument-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:'Instrument Sans';font-weight:400;font-display:swap;src:url(fonts/instrument-sans-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+A720-A7FF}
+@font-face{font-family:'Instrument Sans';font-weight:600;font-display:swap;src:url(fonts/instrument-sans-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:'Instrument Sans';font-weight:600;font-display:swap;src:url(fonts/instrument-sans-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+A720-A7FF}
+
+:root{--bg:#0d121b;--panel:#151c29;--soft:#1b2433;--line:#253044;--ink:#e7ebf2;--muted:#93a0b6;--accent:#f0a53a;--accent-ink:#151c29;
+  --display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;--text:'Instrument Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--text)}
+a{color:var(--accent)}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}
+.brand svg{width:34px;height:34px;color:var(--accent);flex:none}
+.brand b{font:800 26px/1 var(--display);letter-spacing:.03em}
+nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+
+.hero{padding:72px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.eyebrow{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font:800 clamp(52px,7vw,88px)/.92 var(--display);letter-spacing:.01em;margin:0 0 22px;text-transform:uppercase}
+.lead{font-size:19px;color:var(--muted);max-width:30em;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);font-weight:600;border-radius:999px;padding:13px 22px;text-decoration:none}
+.note{color:var(--muted);font-size:15px}
+.shots{position:relative}
+.shots .tv{border-radius:14px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.shots .phone{position:absolute;right:-12px;bottom:-36px;width:28%;border-radius:18px;border:3px solid #232c3d;box-shadow:0 20px 50px rgba(0,0,0,.55)}
+
+.notice{margin:56px 0 0;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:20px 24px;font-size:16px}
+.notice b{color:var(--ink)}
+
+section{padding:64px 0}
+h2{font:800 clamp(36px,4.4vw,52px)/1 var(--display);text-transform:uppercase;letter-spacing:.01em;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:40em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-size:17px;margin:0 0 6px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+
+.premium{background:linear-gradient(180deg,var(--bg),#111827)}
+.premium .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.premium ul{list-style:none;padding:0;margin:0 0 24px}
+.premium li{padding:12px 0 12px 34px;border-bottom:1px solid var(--line);position:relative}
+.premium li:before{content:"";position:absolute;left:4px;top:19px;width:14px;height:8px;border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(-45deg)}
+.price{font-weight:600}
+.premium img{border-radius:14px;border:1px solid var(--line)}
+
+.plain{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:var(--muted)}
+
+/* strony z tekstem (polityka itp.) */
+.doc{max-width:760px;padding:56px 24px 80px}
+.doc h1{font-size:clamp(44px,6vw,64px);margin-bottom:8px}
+.doc h3{font-size:19px;margin:36px 0 8px}
+.doc p,.doc li{color:#cfd6e2}
+.doc code{background:var(--soft);border-radius:5px;padding:1px 6px;font-size:.92em}
+.doc table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.doc th,.doc td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:10px 8px}
+.doc th{color:var(--ink)}
+.doc .meta{color:var(--muted);margin:0 0 28px}
+
+@media (max-width:860px){
+  nav{gap:16px}
+  .hero{padding:40px 0 24px}
+  .hero .wrap,.premium .wrap{grid-template-columns:1fr}
+  .shots{margin-bottom:36px}
+  .grid,.plain{grid-template-columns:1fr}
+}
+@media (max-width:520px){nav a.opt{display:none}}
