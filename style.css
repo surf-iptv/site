@@ -49,13 +49,20 @@ h2{font:800 clamp(36px,4.4vw,52px)/1 var(--display);text-transform:uppercase;let
 
 .premium{background:linear-gradient(180deg,var(--bg),#111827)}
 .premium .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.premium ul{list-style:none;padding:0;margin:0 0 24px}
-.premium li{padding:12px 0 12px 34px;border-bottom:1px solid var(--line);position:relative}
-.premium li:before{content:"";position:absolute;left:4px;top:19px;width:14px;height:8px;border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(-45deg)}
+.premium ul,.ticks{list-style:none;padding:0;margin:0 0 24px}
+.premium li,.ticks li{padding:12px 0 12px 34px;border-bottom:1px solid var(--line);position:relative}
+.premium li:before,.ticks li:before{content:"";position:absolute;left:4px;top:19px;width:14px;height:8px;border-left:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:rotate(-45deg)}
 .price{font-weight:600}
 .premium img{border-radius:14px;border:1px solid var(--line)}
 
 .plain{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+.two{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.two.flip{grid-template-columns:1.15fr 1fr}
+.framed{border-radius:14px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+
+.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.gallery img{border-radius:16px;border:1px solid var(--line)}
 
 footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
@@ -78,5 +85,9 @@ footer a{color:var(--muted)}
   .hero .wrap,.premium .wrap{grid-template-columns:1fr}
   .shots{margin-bottom:36px}
   .grid,.plain{grid-template-columns:1fr}
+  .two,.two.flip{grid-template-columns:1fr}
+  .two.flip .framed{order:2}
+  .gallery{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+  .gallery img{scroll-snap-align:start}
 }
 @media (max-width:520px){nav a.opt{display:none}}
