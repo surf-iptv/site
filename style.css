@@ -60,6 +60,7 @@ h2{font:800 clamp(36px,4.4vw,52px)/1 var(--display);text-transform:uppercase;let
 .two{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
 .two.flip{grid-template-columns:1.15fr 1fr}
 .framed{border-radius:14px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.framed.portrait{max-width:300px;justify-self:center;border-radius:20px}
 
 .gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
 .gallery img{border-radius:16px;border:1px solid var(--line)}
